@@ -56,7 +56,6 @@ int main(){
     vector<int> data = {5,3,8,2,4,7,9,1,6};
     Node *root = nullptr;
     for (auto v: data){
-        cout << "Inserting " << v << "\n";
         BSTinsert(root, v);
         int depth = treeHeight(root);
         for (int i = 0; i <+depth; i++){
@@ -66,6 +65,7 @@ int main(){
     int target = 1;
     Node *current = root; Node *parent = nullptr;
     while(current != nullptr && current ->data != target){
+        parent = current;
         if (target < current->data)
             current = current->left;
             else
