@@ -19,7 +19,7 @@ void printlevel(Node *root, int level){
     }
 }
 
-void BSTinsert(Node *root, int data){
+void BSTinsert(Node *&root, int data){
     Node *current = root;
     while(current != nullptr){
         if (data < current->data){
