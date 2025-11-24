@@ -21,6 +21,10 @@ void printlevel(Node *root, int level){
 
 void BSTinsert(Node *&root, int data){
     Node *current = root;
+    if (root == nullptr){
+        root = new Node(data);
+        return;
+    }
     while(current != nullptr){
         if (data < current->data){
             if (current->left == nullptr){
