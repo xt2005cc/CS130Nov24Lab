@@ -11,9 +11,10 @@ struct Node{
 
 int treeHeight(Node *root){
     if(root == nullptr) return -1;
-    if (root->left == nullptr && root->right == nullptr)
-    return 0;
-    return 1 + max(treeHeight(root->left), treeHeight(root->right));
+    int leftHeight = treeHeight(root->left);
+    int rightHeight = treeHeight(root->right);
+    return max(leftHeight, rightHeight) + 1;
+
 }
 
 void printlevel(Node *root, int level){
