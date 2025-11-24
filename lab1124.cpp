@@ -44,7 +44,7 @@ int main(){
     vector<int> data = {5,3,8,2,4,7,9,1,6};
     Node *root = nullptr;
     for (auto v: data){
-        cout << "Inserting" << v << "\n";
+        cout << "Inserting " << v << "\n";
         BSTinsert(root, v);
     }
     cout << endl;
